@@ -53,11 +53,12 @@ Rails.application.routes.draw do
         get 'cycledata'
       end
     end
-    resources :parking
+    resources :parking do
       collection do 
-        post 'cycledata'
-        get 'cycledata'
+        post 'parkingdata'
+        get 'parkingdata'
       end
+    end
     resources :pollution
     resources :works
   end
