@@ -47,8 +47,17 @@ Rails.application.routes.draw do
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
   namespace :dal do
-    resources :cycle
+    resources :cycle do
+      collection do 
+        post 'cycledata'
+        get 'cycledata'
+      end
+    end
     resources :parking
+      collection do 
+        post 'cycledata'
+        get 'cycledata'
+      end
     resources :pollution
     resources :works
   end
