@@ -1,15 +1,17 @@
 class JourneyPlanner
 require 'httparty'
 require 'json'
+require 'pry'
 
 
-def plan(origin, destination)
+def self.plan(origin, destination)
 	# make the request to the exernal API and receive the journey planning results 
 	begin
-		request = HTTParty.get("http://maps.googleapis.com/maps/api/directions/output?origin=#{origin}&destination=#{destination}&key=#{GOOGLE_API_KEY}")
+		request = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{origin}&destination=#{destination}&key=#{GOOGLE_API_KEY}")
 		response = JSON.parse(request.body)
+		return response
 	rescue
-
+		return "journey request failed response:  #{response} " 
 	end
 
 end

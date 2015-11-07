@@ -1,4 +1,4 @@
-class UicontrollerController < ApplicationController
+class UiController < ApplicationController
 
 	@returnData = {}
 	def getCycleData(params)
@@ -17,6 +17,13 @@ class UicontrollerController < ApplicationController
 
 		render :json => @returnData
 
+	end
+
+	def planJourney
+
+		journey = JourneyPlanner.plan(params[:origin], params[:destination])
+
+		render :json => journey
 	end
 
 	def getParkingData(params)

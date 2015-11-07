@@ -46,6 +46,10 @@ Rails.application.routes.draw do
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
+
+  get 'journeyplanning/plan' => 'ui#planJourney'
+
+
   namespace :dal do
     resources :cycle do
       collection do 
