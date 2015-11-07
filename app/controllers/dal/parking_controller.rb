@@ -1,5 +1,6 @@
 class Dal::ParkingController < ApplicationController
 
+	protect_from_forgery with: :null_session
 	def parkingdata
 		# Get the params from the request and run these into the model
 		# binding.pry
@@ -8,8 +9,12 @@ class Dal::ParkingController < ApplicationController
 			return
 		end
 		@parkingparams = JSON.parse(request.body.read)
-		ParkingReference.updateData(@parkingparams)
+		ref = ParkingReference.updateData(@parkingparams)
+	 	if ref
 		render :html => "success"
+		else
+			render :html => "failure"
 		end
+	end
 
 end

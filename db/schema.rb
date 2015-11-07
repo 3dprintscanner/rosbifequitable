@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107130904) do
+ActiveRecord::Schema.define(version: 20151107210130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,33 @@ ActiveRecord::Schema.define(version: 20151107130904) do
     t.integer  "cycle_reference_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+  end
+
+  create_table "parking_references", force: :cascade do |t|
+    t.text     "addresse"
+    t.date     "date_maj"
+    t.boolean  "automatique"
+    t.integer  "taux_occup"
+    t.integer  "taux_dispo"
+    t.text     "lien"
+    t.float    "geometryx"
+    t.float    "geometryy"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.string   "number"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "open"
+  end
+
+  create_table "parkings", force: :cascade do |t|
+    t.integer  "parking_reference_id"
+    t.date     "date_maj"
+    t.integer  "taux_occup"
+    t.integer  "taux_dispo"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end

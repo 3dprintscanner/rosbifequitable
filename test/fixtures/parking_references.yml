@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  addresse: MyText
+  date_maj: 2015-11-07
+  automatique: false
+  taux_occup: 1
+  taux_dispo: 1
+  lien: MyText
+  geometryx: 1.5
+  geometryy: 1.5
+
+two:
+  addresse: MyText
+  date_maj: 2015-11-07
+  automatique: false
+  taux_occup: 1
+  taux_dispo: 1
+  lien: MyText
+  geometryx: 1.5
+  geometryy: 1.5

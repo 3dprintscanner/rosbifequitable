@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parking_reference_id: 1
+  date_maj: 2015-11-07
+  taux_occup: 1
+  taux_dispo: 1
+
+two:
+  parking_reference_id: 1
+  date_maj: 2015-11-07
+  taux_occup: 1
+  taux_dispo: 1

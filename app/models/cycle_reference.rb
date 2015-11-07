@@ -1,3 +1,4 @@
+
 class CycleReference < ActiveRecord::Base
 	has_many :cycles
 	validates :name , presence: true
@@ -5,7 +6,6 @@ class CycleReference < ActiveRecord::Base
 	validates :longitude, presence: true
 	require 'pry'
 
-	attr_accessor
 
 
 	def self.updateData(cycleData)
@@ -24,6 +24,18 @@ class CycleReference < ActiveRecord::Base
 		else
 
 		end
+	end
+
+	def self.getCycleDataByLocation
+
+	end
+
+	def self.getCycleDataByTime
+
+	end
+
+	def self.getCycleDataByInterval
+
 	end
 
 
