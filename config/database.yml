@@ -23,25 +23,45 @@
 # production:
 #   <<: *default
 #   database: db/production.sqlite3
+# development:
+#   adapter: postgresql
+#   database: dev_db
+#   pool: 5
+#   timeout: 5000
+#   user: user
+#   password: password
+# test:
+#   adapter: postgresql
+#   database: test_db
+#   pool: 5
+#   timeout: 5000
+#   user: user
+#   password: password
+
+# production:
+#   adapter: postgresql
+#   database: prod_db
+#   pool: 5
+#   timeout: 5000
+#   user: user
+#   password: password
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
 development:
-  adapter: postgresql
-  database: dev_db
-  pool: 5
-  timeout: 5000
-  user: user
-  password: password
+  <<: *default
+  database: rb_development
+
 test:
-  adapter: postgresql
-  database: test_db
-  pool: 5
-  timeout: 5000
-  user: user
-  password: password
+  <<: *default
+  database: rb_test
+
+staging:
+  url: <%= ENV['DATABASE_URL'] %>
 
 production:
-  adapter: postgresql
-  database: prod_db
-  pool: 5
-  timeout: 5000
-  user: user
-  password: password
+  url: <%= ENV['DATABASE_URL'] %>
