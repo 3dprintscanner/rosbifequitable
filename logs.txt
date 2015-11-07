@@ -1,0 +1,62 @@
+2015-11-07T17:00:48.611944+00:00 heroku[api]: Enable Logplex by 1988anthonythomas@gmail.com
+2015-11-07T17:00:48.611944+00:00 heroku[api]: Release v2 created by 1988anthonythomas@gmail.com
+2015-11-07T17:00:49.162360+00:00 heroku[api]: Attach DATABASE resource by 1988anthonythomas@gmail.com
+2015-11-07T17:00:49.162360+00:00 heroku[api]: Release v3 created by 1988anthonythomas@gmail.com
+2015-11-07T17:00:49.239310+00:00 heroku[api]: Attach HEROKU_POSTGRESQL_ONYX resource by 1988anthonythomas@gmail.com
+2015-11-07T17:00:49.239310+00:00 heroku[api]: Release v4 created by 1988anthonythomas@gmail.com
+2015-11-07T17:01:59.935787+00:00 heroku[slug-compiler]: Slug compilation started
+2015-11-07T17:01:59.935796+00:00 heroku[slug-compiler]: Slug compilation failed: failed to compile Ruby app
+2015-11-07T17:03:40.844420+00:00 heroku[api]: Set LANG, RAILS_ENV, RACK_ENV, SECRET_KEY_BASE, RAILS_SERVE_STATIC_FILES config vars by 1988anthonythomas@gmail.com
+2015-11-07T17:03:40.844420+00:00 heroku[api]: Release v5 created by 1988anthonythomas@gmail.com
+2015-11-07T17:03:41.255746+00:00 heroku[api]: Scale to web=1 by 1988anthonythomas@gmail.com
+2015-11-07T17:03:41.326369+00:00 heroku[api]: Deploy 7a72027 by 1988anthonythomas@gmail.com
+2015-11-07T17:03:41.326407+00:00 heroku[api]: Release v6 created by 1988anthonythomas@gmail.com
+2015-11-07T17:03:41.598141+00:00 heroku[slug-compiler]: Slug compilation started
+2015-11-07T17:03:41.598148+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-11-07T17:03:43.426445+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 32865 -e production`
+2015-11-07T17:03:49.823920+00:00 app[web.1]: [2015-11-07 17:03:49] INFO  WEBrick 1.3.1
+2015-11-07T17:03:49.823934+00:00 app[web.1]: [2015-11-07 17:03:49] INFO  ruby 2.0.0 (2015-04-13) [x86_64-linux]
+2015-11-07T17:03:49.824252+00:00 app[web.1]: [2015-11-07 17:03:49] INFO  WEBrick::HTTPServer#start: pid=3 port=32865
+2015-11-07T17:03:50.079884+00:00 heroku[web.1]: State changed from starting to up
+2015-11-07T17:05:32.744731+00:00 heroku[slug-compiler]: Slug compilation started
+2015-11-07T17:05:32.744743+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-11-07T17:05:32.583637+00:00 heroku[api]: Deploy bdf84cc by 1988anthonythomas@gmail.com
+2015-11-07T17:05:32.583676+00:00 heroku[api]: Release v7 created by 1988anthonythomas@gmail.com
+2015-11-07T17:05:33.674626+00:00 heroku[web.1]: State changed from up to starting
+2015-11-07T17:05:35.421206+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 27146 -e production`
+2015-11-07T17:05:38.256002+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-11-07T17:05:39.288001+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:170:in `select'
+2015-11-07T17:05:39.287995+00:00 app[web.1]: [2015-11-07 17:05:39] FATAL SignalException: SIGTERM
+2015-11-07T17:05:39.288004+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:32:in `start'
+2015-11-07T17:05:39.288003+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:170:in `block in start'
+2015-11-07T17:05:39.288005+00:00 app[web.1]: 	/app/vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:160:in `start'
+2015-11-07T17:05:39.288006+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/rack-1.6.4/lib/rack/handler/webrick.rb:34:in `run'
+2015-11-07T17:05:39.288006+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+2015-11-07T17:05:39.288007+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.0/lib/rails/commands/server.rb:80:in `start'
+2015-11-07T17:05:39.288009+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:80:in `block in server'
+2015-11-07T17:05:39.288010+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:75:in `tap'
+2015-11-07T17:05:39.288011+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:75:in `server'
+2015-11-07T17:05:39.288012+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+2015-11-07T17:05:39.288013+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.0.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+2015-11-07T17:05:39.288070+00:00 app[web.1]: [2015-11-07 17:05:39] INFO  WEBrick::HTTPServer#start done.
+2015-11-07T17:05:39.288014+00:00 app[web.1]: 	bin/rails:4:in `require'
+2015-11-07T17:05:39.288015+00:00 app[web.1]: 	bin/rails:4:in `<main>'
+2015-11-07T17:05:39.288020+00:00 app[web.1]: [2015-11-07 17:05:39] INFO  going to shutdown ...
+2015-11-07T17:05:39.334686+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2015-11-07T17:05:39.334688+00:00 app[web.1]: Exiting
+2015-11-07T17:05:39.334680+00:00 app[web.1]: => Booting WEBrick
+2015-11-07T17:05:39.334687+00:00 app[web.1]: => Ctrl-C to shutdown server
+2015-11-07T17:05:39.334685+00:00 app[web.1]: => Rails 4.2.0 application starting in production on http://0.0.0.0:32865
+2015-11-07T17:05:40.031326+00:00 app[web.1]: [2015-11-07 17:05:40] INFO  WEBrick 1.3.1
+2015-11-07T17:05:40.031342+00:00 app[web.1]: [2015-11-07 17:05:40] INFO  ruby 2.0.0 (2015-04-13) [x86_64-linux]
+2015-11-07T17:05:40.031653+00:00 app[web.1]: [2015-11-07 17:05:40] INFO  WEBrick::HTTPServer#start: pid=3 port=27146
+2015-11-07T17:05:40.094115+00:00 heroku[web.1]: Process exited with status 143
+2015-11-07T17:05:40.623791+00:00 heroku[web.1]: State changed from starting to up
+2015-11-07T17:07:27.258542+00:00 heroku[router]: at=info method=GET path="/" host=stark-thicket-6499.herokuapp.com request_id=7d973b0e-20c8-46ef-aef1-efd7ddd16669 fwd="37.58.181.91" dyno=web.1 connect=0ms service=77ms status=200 bytes=490
+2015-11-07T17:07:27.938503+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=stark-thicket-6499.herokuapp.com request_id=f34a2513-3a3d-41e2-a1f2-9fef1bdbe836 fwd="37.58.181.91" dyno=web.1 connect=0ms service=3ms status=200 bytes=242
+2015-11-07T17:07:54.584857+00:00 heroku[router]: at=info method=POST path="/dal/cycle/cycledata" host=stark-thicket-6499.herokuapp.com request_id=d1fc24fa-5683-458a-ba56-5fc8829f65d3 fwd="37.58.181.91" dyno=web.1 connect=0ms service=85ms status=500 bytes=568
+2015-11-07T17:07:54.564035+00:00 app[web.1]: => Booting WEBrick
+2015-11-07T17:07:54.564039+00:00 app[web.1]: => Rails 4.2.0 application starting in production on http://0.0.0.0:27146
+2015-11-07T17:07:54.564041+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2015-11-07T17:07:54.564042+00:00 app[web.1]: => Ctrl-C to shutdown server
+2015-11-07T17:08:00.826564+00:00 heroku[router]: at=info method=POST path="/dal/cycle/cycledata" host=stark-thicket-6499.herokuapp.com request_id=daf13ef1-c040-4362-bb13-fc460d59b1be fwd="37.58.181.91" dyno=web.1 connect=0ms service=35ms status=500 bytes=568

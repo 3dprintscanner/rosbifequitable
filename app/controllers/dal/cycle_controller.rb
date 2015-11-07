@@ -21,9 +21,13 @@ class Dal::CycleController < ApplicationController
 
 	end
 
+	def querydata()
+
+	end
+
 	def cycledata
 		# Get the params from the request and run these into the model
-		binding.pry
+		# binding.pry
 		if !params[:cycle]
 			render :json => "error, please POST to this endpoint"
 			return
@@ -31,7 +35,7 @@ class Dal::CycleController < ApplicationController
 		@cycleparams = JSON.parse(request.body.read)
 		CycleReference.updateData(@cycleparams)
 		render :html => "success"
-		end
+	end
 
 	private 
 	def cycle_params
