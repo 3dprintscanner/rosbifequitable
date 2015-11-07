@@ -1,0 +1,2 @@
+module Dal::WorksHelper
+end

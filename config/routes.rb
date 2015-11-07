@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'dal#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -46,6 +46,12 @@ Rails.application.routes.draw do
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
+  namespace :dal do
+    resources :cycle
+    resources :parking
+    resources :pollution
+    resources :works
+  end
 
   # Example resource route within a namespace:
   #   namespace :admin do

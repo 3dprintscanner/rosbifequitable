@@ -1,0 +1,2 @@
+module Dal::PollutionHelper
+end
