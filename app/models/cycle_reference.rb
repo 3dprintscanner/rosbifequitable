@@ -45,13 +45,13 @@ class CycleReference < ActiveRecord::Base
 
 		def self.selectReferenceData(data)
 			selected = data.select { |element| CycleReference.columns.map {|column| column.name}.include? element}
-			binding.pry
+			# binding.pry
 			return selected
 		end
 
 		def self.selectCycleData(data)
 			selected  = data.select { |element| Cycle.columns.map {|column| column.name}.include? element}
-			binding.pry
+			# binding.pry
 			return selected
 		end
 	
