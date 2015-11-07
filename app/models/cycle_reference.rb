@@ -15,32 +15,44 @@ class CycleReference < ActiveRecord::Base
 		
 		@cycleData = cycleData
 
-		if request_is_valid? && station_exists?
-			Cycle.create(@cycleData)
-		elsif request_is_valid? && !station_exists?
-			CycleReference.create(selectReferenceData(@cycleData))
-			Cycle.create(selectCycleData(@cycleData))
+		if @cycleData.is_a? Array 
+			@cycleData.each do |cycle|
+				insertData(cycle)
+			end
+		elsif @cycleData.is_a? Hash
+			insertData(@cycleData)
 		else
-			puts "invalid request"
+
 		end
 	end
 
 
 	private 
 
-		def self.station_exists?
-			if CycleReference.where("name = ? AND number = ?", @cycleData['name'], @cycleData['number']).size > 0
+		def self.station_exists?(cycle)
+			if CycleReference.where("name = ? AND number = ?", cycle['name'], cycle['number']).size > 0
 				return true
 			else
 				return false
 			end
 		end
 
-		def self.request_is_valid?
+		def self.request_is_valid?(data)
 		# check the valid request params are in the data structure
 		# improve later
 			return true
 
+		end
+
+		def self.insertData(data)
+			if request_is_valid?(data) && station_exists?(data)
+				Cycle.create(data)
+			elsif request_is_valid?(data) && !station_exists?(data)
+				CycleReference.create(selectReferenceData(data))
+				Cycle.create(selectCycleData(data))
+			else
+				puts "invalid request"
+			end
 		end
 
 		def self.selectReferenceData(data)
