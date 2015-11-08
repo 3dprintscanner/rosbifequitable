@@ -28,7 +28,6 @@ class ReferenceBase
 
 		def getDataByID(id)
 			reference_parent = @referenceObject.where("number = ?", id.to_s ).first
-			binding.pry
 			return reference_parent.send(@sendMethod)
 		end
 
