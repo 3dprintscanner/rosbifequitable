@@ -5,12 +5,15 @@ class ParkingReference < ActiveRecord::Base
 	def self.updateData(params)
 		features = params['features']
 		if features.is_a? Array 
-
 			features.each  {|feature| @base.updateData(mapColumns(feature)) }
 		elsif features.is_a? Hash
 				@base.updateData(mapColumns(feature))
 		else
 		end
+	end
+
+	def self.getDataByObjectID(objectID)
+		@base.getDataByID(objectID)
 	end
 
 	private 

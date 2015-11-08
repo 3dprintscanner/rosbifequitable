@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   get 'journeyplanning/plan' => 'ui#planJourney'
+  get 'journeyplanning/parking' => 'ui#getParkingData'
 
 
   namespace :dal do

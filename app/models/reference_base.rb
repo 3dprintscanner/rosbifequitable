@@ -1,5 +1,4 @@
 class ReferenceBase
-
 	require 'pry'
 
 	def initialize(sendMethod, unitObject, referenceObject)
@@ -27,6 +26,12 @@ class ReferenceBase
 
 		end
 
+		def getDataByID(id)
+			reference_parent = @referenceObject.where("number = ?", id.to_s ).first
+			binding.pry
+			return reference_parent.send(@sendMethod)
+		end
+
 
 		private 
 
@@ -50,7 +55,6 @@ class ReferenceBase
 				station = station_exists(data)
 				if request_is_valid?(data) && station != false
 					# get the reference object and create a child thereof
-
 					station.first.send(@sendMethod).create(selectCycleData(data))
 				elsif request_is_valid?(data) && station == false
 					parent = @referenceObject.create(selectReferenceData(data))

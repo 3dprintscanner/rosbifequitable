@@ -1,5 +1,5 @@
 class UiController < ApplicationController
-
+	require 'pry'
 	@returnData = {}
 	def getCycleData(params)
 		case params[:type]
@@ -26,7 +26,10 @@ class UiController < ApplicationController
 		render :json => journey
 	end
 
-	def getParkingData(params)
+	def getParkingData
+		# get the parking data for a given objectID
+		binding.pry
+		render :json => ParkingReference.getDataByObjectID(params[:object_id])
 
 	end
 
